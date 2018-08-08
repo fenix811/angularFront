@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, Response} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+
+import Product from './product';
+import { HttpClient} from '@angular/common/http';
 
 const API_URL = 'http://localhost:61885/api/';
 
@@ -8,8 +11,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
   }
-  getProducts() {
-    return this.http.get('/api/getProducts')
-      .map((res: Response) => res.json());
+
+  public getProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(API_URL + 'product');
   }
 }
