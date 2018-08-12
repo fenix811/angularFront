@@ -1,3 +1,9 @@
+.product-list-wrapper {
+    /* width:25%; */
+    height: 100%;
+    padding: 10px;
+    overflow: auto;
+}
 .product-item {
     margin: 20px
 }

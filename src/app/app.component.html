@@ -1,8 +1,16 @@
 <div class='main'>
   <app-breadcrumbs></app-breadcrumbs>
-  <hr/>
-  <app-product-list
-    [products]="products"
-  >
-  </app-product-list>
+  <hr class='vertical-line' />
+  <div class='client-wrapper'>
+    <div class='main-left'>
+        <app-product-list
+        [products]="products"
+      >
+      </app-product-list>
+    </div>
+    <div class='main-right'>
+        <app-product-details>
+          </app-product-details>
+    </div>
+  </div>
 </div>

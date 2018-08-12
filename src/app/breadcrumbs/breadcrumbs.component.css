@@ -3,4 +3,5 @@
     height: 30px;
     align-items: center;
     margin: 0 10px;
+    justify-content: space-between;
 }

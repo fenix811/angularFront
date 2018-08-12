@@ -9,17 +9,21 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 import { HttpClientModule } from '@angular/common/http';
 // import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing-module';
+import { AdministrationComponent } from './administration-component/administration-component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreadcrumbsComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AdministrationComponent
   ],
   imports: [
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
