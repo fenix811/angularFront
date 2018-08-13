@@ -8,9 +8,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 import { HttpClientModule } from '@angular/common/http';
-// import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing-module';
-import { AdministrationComponent } from './administration-component/administration-component';
+import { AdministrationComponent } from './administration/administration.component';
+
+import { RouterModule } from '@angular/router';
+import { SiteComponent } from './site/site.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { AdministrationComponent } from './administration-component/administrati
     BreadcrumbsComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    AdministrationComponent
+    AdministrationComponent,
+    SiteComponent
   ],
   imports: [
     HttpClientModule,

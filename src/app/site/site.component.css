@@ -1,0 +1,22 @@
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 0;
+}
+.client-wrapper {
+    display: flex;
+    flex-direction: row;
+     height: 98%;
+}
+.main-left {
+    width: 25%;
+    border-right: 1px solid #ccc;
+}
+.main-right {
+    width: 98%;
+}
+.vertical-line {
+    margin: 0px
+}
