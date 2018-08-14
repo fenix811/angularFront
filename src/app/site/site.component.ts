@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from '../api.service';
-import Product from '../product';
+import Product from '../interfaces/product';
 
 @Component({
   selector: 'app-site',
@@ -12,7 +12,7 @@ import Product from '../product';
 export class SiteComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getProducts().subscribe(res => this.products = res);

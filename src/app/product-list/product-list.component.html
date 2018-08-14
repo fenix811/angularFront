@@ -1,7 +1,8 @@
 <div class="product-list-wrapper">
-  <div id="test" class="product-item" *ngFor="let product of products">
+  <div id="test" class="product-item" *ngFor="let product of products" (click)="onSelect(product)">
     {{product.name}}
   </div>
 </div>
 
 
+<app-product-detail [product]="selectedProduct"></app-product-detail>

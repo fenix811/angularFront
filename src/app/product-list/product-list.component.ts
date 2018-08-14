@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import Product from '../product';
+import Product from '../interfaces/product';
 
 @Component({
   selector: 'app-product-list',
@@ -8,10 +8,16 @@ import Product from '../product';
 })
 export class ProductListComponent {
 
+  selectedProduct: Product = null;
+
   @Input()
   products: Product[];
 
   constructor() {
+  }
+
+  onSelect(product: Product): void {
+    this.selectedProduct = product;
   }
 
 }
