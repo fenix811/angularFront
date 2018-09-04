@@ -4,11 +4,13 @@
   <div class='main-left'>
       <app-product-list
       [products]="products"
+      (productSelect)="productSelected($event)"
     >
     </app-product-list>
   </div>
   <div class='main-right'>
-      <app-product-details>
+      <app-product-details [product]="selectedProduct">
         </app-product-details>
+
   </div>
 </div>
