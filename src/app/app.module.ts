@@ -13,6 +13,17 @@ import { AdministrationComponent } from './administration/administration.compone
 
 import { RouterModule } from '@angular/router';
 import { SiteComponent } from './site/site.component';
+import { MatButtonModule } from '@angular/material';
+import {FormsModule} from '@angular/forms';
+import {
+  MatInputModule,
+ MatListModule,
+ MatMenuModule,
+ MatProgressBarModule,
+ MatProgressSpinnerModule,
+} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +37,10 @@ import { SiteComponent } from './site/site.component';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
