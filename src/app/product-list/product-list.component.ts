@@ -7,7 +7,6 @@ import Product from '../interfaces/product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-
   // selectedProduct: Product;
 
   @Input()
@@ -20,7 +19,6 @@ export class ProductListComponent {
   }
 
   onSelect(product: Product): void {
-    debugger;
     // this.selectedProduct = product;
     this.productSelect.emit(product);
   }

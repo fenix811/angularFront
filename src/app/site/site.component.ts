@@ -11,18 +11,21 @@ import Product from '../interfaces/product';
 })
 export class SiteComponent implements OnInit {
   products: Product[] = [];
+  isLoading = true;
   selectedProduct: Product = null;
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.apiService.getProducts().subscribe(res => this.products = res);
+    this.apiService.getProducts().subscribe(res => {
+      this.products = res;
+      this.isLoading = false;
+    });
   }
 
   productSelected(product: Product) {
-    console.log(product);
     this.selectedProduct = product;
-    debugger;
+    ;
   }
 
 }

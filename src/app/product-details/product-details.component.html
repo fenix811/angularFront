@@ -1,10 +1,23 @@
 <div class='product-details-wrapper'>
 
-    <form >
-        <mat-form-field >
-          <input placeholder="Test label" matInput />
+    <form *ngIf="product != null">
+        <mat-form-field style="width:100%">
+          <input placeholder="Product Name" matInput />
+        </mat-form-field >
+        <mat-form-field style="width:100%">
+          <textarea matInput placeholder="Description"></textarea>
         </mat-form-field>
-        <button mat-button>My Button</button>
+      
+        <mat-form-field style="width:100%">
+          <mat-select placeholder="Company">
+            <mat-option value="1">Company 1</mat-option>
+            <mat-option value="2">Company 2</mat-option>
+          </mat-select>
+        </mat-form-field>
+      <!-- <hr style="" /> -->
+      <div style="display:flex; justify-content:flex-end">
+        <button mat-button>SAVE</button>
+      </div>
       </form>
       
   
