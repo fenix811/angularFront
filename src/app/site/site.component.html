@@ -2,13 +2,13 @@
 <hr class='vertical-line' />
 <div class='client-wrapper'>
   <div class='main-left'>
-      <app-product-list
+      <div style="display:flex; justify-content: center;margin:30px;" *ngIf="isLoading">
+          <mat-spinner></mat-spinner>
+      </div>
+        <app-product-list
       [products]="products"
       (productSelect)="productSelected($event)"
       >
-      <div *ngIf="!isLoading">
-        <mat-spinner></mat-spinner>
-      </div>
     </app-product-list>
   </div>
   <div class='main-right'>
