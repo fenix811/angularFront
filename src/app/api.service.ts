@@ -13,6 +13,6 @@ export class ApiService {
   }
 
   public getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(API_URL + 'product');
+    return this.http.get<Product[]>('api/product');
   }
 }
