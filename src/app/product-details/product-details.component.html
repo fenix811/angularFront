@@ -2,20 +2,20 @@
 
     <form *ngIf="product != null">
         <mat-form-field style="width:100%">
-          <input placeholder="Product Name" matInput />
+          <input placeholder="Product Name" matInput [(ngModel)]="product.name" name="product.name" />
         </mat-form-field >
         <mat-form-field style="width:100%">
-          <textarea matInput placeholder="Description"></textarea>
+          <textarea matInput placeholder="Description" [(ngModel)]="product.description" name="product.description"></textarea>
         </mat-form-field>
       
         <mat-form-field style="width:100%">
-          <mat-select placeholder="Company">
-            <mat-option *ngFor="let company of companies" value="company.id">{{company.name}}</mat-option>
+          <mat-select placeholder="Company" [(value)]="product.companyId" >
+            <mat-option *ngFor="let company of companies" [(value)]="company.id">{{company.name}}</mat-option>
           </mat-select>
         </mat-form-field>
       <!-- <hr style="" /> -->
       <div style="display:flex; justify-content:flex-end">
-        <button mat-button>SAVE</button>
+        <button mat-button (click)="save()"color="primary" >SAVE</button>
       </div>
       </form>
       
