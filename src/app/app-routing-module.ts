@@ -5,6 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdministrationComponent } from './administration/administration.component';
 
 import { SiteComponent } from './site/site.component';
+import { AuthGuard } from './guards/authGuard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -12,9 +14,17 @@ const routes: Routes = [
       component: SiteComponent,
   },
   {
-      path: 'administration',
+      path: 'administration', canActivate: [AuthGuard],
       component: AdministrationComponent,
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

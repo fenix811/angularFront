@@ -45,6 +45,8 @@ import {FormsModule} from '@angular/forms';
   MatTabsModule,
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthGuard } from './guards/authGuard';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -54,7 +56,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ProductListComponent,
     ProductDetailsComponent,
     AdministrationComponent,
-    SiteComponent
+    SiteComponent,
+    LoginComponent
   ],
   imports: [
     HttpClientModule,
@@ -103,7 +106,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTabsModule,
 
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
