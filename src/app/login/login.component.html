@@ -1,3 +1,12 @@
-<p>
-  login works!
-</p>
+<div style='position: absolute; left: 35%; top: 20%; height: 30%; width: 30%; background-color: #fff;'>
+  <mat-form-field style="width:100%">
+    <input placeholder="User Name" matInput [(ngModel)]="user.Username" name="user.Username" />
+  </mat-form-field>
+  <mat-form-field style="width:100%">
+    <input placeholder="Password" matInput [(ngModel)]="user.Password" name="user.Password" />
+  </mat-form-field>
+  <div style="display:flex; justify-content:flex-end">
+    <button mat-button (click)="cancel()" color="primary">cancel</button>
+    <button mat-button (click)="login()" color="primary">Login</button>
+  </div>
+</div>

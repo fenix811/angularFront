@@ -15,12 +15,12 @@ export class ProductDetailsComponent implements OnInit {
   public product: Product;
 
   constructor(private apiService: ApiService) {
-    this.companies = [{id: 1, name: 'qwe'}, {id: 2, name: 'asd'}];
-   }
+    this.companies = [{ id: 1, name: 'qwe' }, { id: 2, name: 'asd' }];
+  }
 
   ngOnInit() {
   }
-  save(){
+  save() {
     console.log(this.product);
     debugger;
   }
