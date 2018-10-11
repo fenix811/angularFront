@@ -11,8 +11,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { AdministrationComponent } from './administration/administration.component';
 
 import { SiteComponent } from './site/site.component';
-import {FormsModule} from '@angular/forms';
- import {
+import { FormsModule } from '@angular/forms';
+import {
   MatAutocompleteModule,
   MatButtonModule,
   MatButtonToggleModule,
@@ -44,9 +44,11 @@ import {FormsModule} from '@angular/forms';
   MatTableModule,
   MatTabsModule,
 } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthGuard } from './guards/authGuard';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './services/authenticationService';
+import { CompanyListComponent } from './company-list/company-list.component';
 
 
 @NgModule({
@@ -57,7 +59,8 @@ import { LoginComponent } from './login/login.component';
     ProductDetailsComponent,
     AdministrationComponent,
     SiteComponent,
-    LoginComponent
+    LoginComponent,
+    CompanyListComponent
   ],
   imports: [
     HttpClientModule,
@@ -107,7 +110,8 @@ import { LoginComponent } from './login/login.component';
 
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    AuthenticationService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,5 @@
+<div class="company-list-wrapper">
+  <div class="company-item" *ngFor="let Company of companies" (click)="onSelect(company)">
+    {{company.name}}
+  </div>
+</div>
